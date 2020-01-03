@@ -20,7 +20,8 @@ function typeTitle(title, animation, speed) {
       setTimeout(type, speed)
     )
     : (
-      isString && (
+      isString
+      ? (
         animation.indexOf("type-") === -1
         ? remove()
         : (
@@ -33,6 +34,7 @@ function typeTitle(title, animation, speed) {
           )
         )
       )
+      : remove()
     )
   }
 
