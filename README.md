@@ -1,4 +1,3 @@
 # Add typing animation to title tag
 
-<img src="./preview.gif>
-          
+<img src="./preview.gif">
