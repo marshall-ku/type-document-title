@@ -20,15 +20,17 @@ function typeTitle(title, animation, speed) {
       setTimeout(type, speed)
     )
     : (
-      animation.indexOf("type-") === -1
-      ? remove()
-      : (
-        animation === "type-once" || (
-          setTimeout(() => {
-            document.title = "\u200E",
-            i = 0,
-            type()
-          }, +animation.replace("type-", ""))
+      isString && (
+        animation.indexOf("type-") === -1
+        ? remove()
+        : (
+          animation === "type-once" || (
+            setTimeout(() => {
+              document.title = "\u200E",
+              i = 0,
+              type()
+            }, +animation.replace("type-", ""))
+          )
         )
       )
     )
